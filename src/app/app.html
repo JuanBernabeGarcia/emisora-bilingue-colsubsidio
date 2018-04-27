@@ -1,0 +1,49 @@
+<div padding>
+  <ion-segment [(ngModel)]="pet"><!-- este es el cambezado -->
+    <ion-segment-button value="kittens">
+      radio bilingue
+    </ion-segment-button>
+    <ion-segment-button value="puppies">
+      servicios
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'puppies'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-puppy-1.jpg">
+      </ion-thumbnail>
+      <h2>Ruby</h2>
+    </ion-item>
+     <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-puppy-1.jpg">
+      </ion-thumbnail>
+      <h2>norte</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-puppy-1.jpg">
+      </ion-thumbnail>
+      <h2>centro</h2>
+    </ion-item>
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-puppy-1.jpg">
+      </ion-thumbnail>
+      <h2>sur</h2>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="' radio bilingue'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-kitten-1.jpg">
+      </ion-thumbnail>
+      <h2>Luna</h2>
+    </ion-item>
+    ...
+  </ion-list>
+</div>
